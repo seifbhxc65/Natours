@@ -1,0 +1,15 @@
+header.header
+  nav.nav.nav--tours
+    a.nav__el(href='/') All tours
+  .header__logo
+    img(src='/img/logo-white.png' alt='Natours logo')
+  nav.nav.nav--user
+   if user 
+    a.nav__el.nav__el--logout  Log out
+    a.nav__el(href='/me')
+      img.nav__user-img(src=`/img/users/${user.photo}` alt=`Photo of ${user.photo}`)
+      span=user.name.split(' ')[0]
+   else
+    button.nav__el
+       a.nav__el(href='/login') Log in
+    button.nav__el.nav__el--cta Sign Up
