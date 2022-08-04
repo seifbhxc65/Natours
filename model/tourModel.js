@@ -180,5 +180,4 @@ tourSchema.post(/^find/, function (next) {
 //   next();
 // });
 const Tour = new mongoose.model('Tour', tourSchema);
-const t = 4;
 module.exports = Tour;
